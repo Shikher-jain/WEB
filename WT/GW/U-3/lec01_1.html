@@ -29,13 +29,126 @@
         document.writeln("<br>")
         document.writeln(typeof Symbol("aaa"))
         document.writeln("<br>")
-        document.writeln("<br>")
-        document.writeln("<br>")
         document.writeln(alert("acb"??"xyz"))
+        var a2= 987
+        let a1 = parseInt(prompt("Enter :"))
+        document.writeln("<br>")
+        document.writeln(a1,"\n")
+        document.writeln("<br>")
+        document.writeln(a1)
+        document.writeln("<br>")
+        let a4 = parseInt(prompt("Enter :"))
+        // document.writeln("<br>")/
+        if (a4>0) document.writeln(a4," is greater then zero")
+        else if (a4==0) document.writeln(a4,"is zero")
+        else document.write(a4," is smallest then zero")
         document.writeln("<br>")
         
-        
+        // switch case 
+        key=4
+        switch (key) {
+            case 1:
+                document.writeln("cade 1")   
+                break;
+                default:
+                document.writeln("default")   
+                break;
+        }
 
+        document.writeln("<br>")
+        
+        // Iteration
+        let i=0
+        while (i<4){
+            document.writeln(i+" ")
+            i++
+        }
+        document.writeln("<br>")
+
+        
+        let j=0
+        do{
+            document.writeln(j+" ")
+            j++
+        }
+        while (j<4)
+        
+        document.writeln("<br>")
+        
+        for (i = 0; i < 5; i++) {
+         
+            document.writeln(i)
+            
+            
+        }
+        
+        document.writeln("<br>")
+        for (let i = 0; i < 5; i++) {
+            document.writeln(i+" ")
+        }
+        document.writeln("<br>")
+        
+        let course ={name:"WT",code:"BCS-502"}
+        for(let property in course){
+            document.writeln(property)      
+            document.writeln(course[property])      
+        }
+        document.writeln("<br>")
+        
+        let arr=["dbms","wt","daa","coi","sc","cg"]
+        document.writeln(arr)
+        document.writeln("<br>")
+        document.writeln("<br>")
+        for(sub of arr){
+            document.writeln(sub)      
+            document.writeln("<br>")
+        }
+        document.writeln("<br>")
+        
+        // FUNCTION
+
+function Fx1() {
+    document.writeln("Fx Without Parameters")
+}
+
+function Fx2(Name) {
+    document.writeln("Fx Without Parameters")
+    document.writeln("Name is",Name)
+}
+
+function Fx3(a,b){
+    return a+b
+}
+
+// Anonymous Functions
+let AnonymousFx = function(){document.writeln("WC")}
+
+// Arrow Function
+let add=(a,b) => a+b
+
+
+document.writeln("<br>")
+Fx1()
+document.writeln("<br>")
+Fx2("SJ")
+document.writeln("<br>")
+document.writeln(Fx3(4,5))
+document.writeln("<br>")
+document.writeln(AnonymousFx)
+document.writeln("<br>")
+AnonymousFx()
+document.writeln("<br>")
+document.writeln(add(2,6))
+document.writeln("<br>")
+
+
+console.log("POP-UP DIALOG BOXES ")
+console.log("Alert Cnfirm Prompt ")
+
+
+alert("ALERT")
+confirm("CONFIRM")
+prompt("PROMPT",4)
     </script>
 </head>
 <body>

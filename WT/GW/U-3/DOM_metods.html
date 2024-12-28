@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM) - 2</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background: #695c5c;
+        }
+        li:hover{
+            border: 1px solid red;
+            background: rgb(199, 184, 181);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li class="list">L1</li>
+        <li class="list">L2</li>
+        <li class="list">L3</li>
+        <li class="list">L4</li>
+        <li class="list">L5</li>
+    </div>
+    <div class="class1">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo vero corporis perferendis, sed voluptas totam fuga dolorum illo est, at explicabo maiores architecto.
+        </p>
+    </div>
+    <div id="id1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora adipisci hic commodi repudiandae ullam laudantium, provident molestias repellat itaque et sequi animi minus, consectetur magni voluptas cum inventore amet saepe facere est delectus! Non?
+        </p>
+    </div>
+
+    <form >
+        <label for="username">NAME:</label>
+        <input type="text" name="username">
+    </form>
+    <script>
+        document.writeln("HTML selector")
+        ele1=document.getElementById("id1")
+        ele2=document.getElementsByClassName("class1")
+        ele3=document.getElementsByTagName("p")
+        ele4=document.getElementsByTagName("username")
+        
+        // ele1.innerHTML=Date()
+    </script>
+    <script>
+        document.writeln("CSS selector")
+        firstItem=document.querySelector("li:hover")
+        firstItem=document.querySelectorAll(".class1")
+    </script>
+</body>
+</html>
