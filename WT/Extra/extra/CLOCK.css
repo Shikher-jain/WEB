@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.clock {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+button {
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    margin: 10px; /* Ensures buttons are spaced */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #388E3C, #66BB6A);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Centering the buttons inside each div */
+.clock-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Add space between clock1 and clock2 */
+#clock1, #clock2 {
+    text-align: center;
+    margin-bottom: 30px; /* Added space between the clocks */
+}

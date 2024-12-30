@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK</title>
+    <link rel="stylesheet" href="CLOCK.css">
+</head>
+<body>
+
+    <div id="clock1">
+        <button onclick='startClock1()'>TIME</button>
+    </div>
+
+    <script>
+        var intervalId1
+        function Clock1(){
+            var now= new Date()
+            var H = now.getHours()
+            var M = now.getMinutes()
+            var S = now.getSeconds()
+
+            H = (H<10)?"0"+H:H
+            M = (M<10)?"0"+M:M
+            S = (S<10)?"0"+S:S
+
+            var Time = H + ":" + M + ":" + S
+            document.getElementById('clock1').textContent=Time
+        }
+
+        function startClock1() {
+            if (!intervalId1) {
+                intervalId1 = setInterval(Clock1, 1000);
+                Clock1();
+            }
+        }
+        
+    </script>
+    
+    <div id="clock2">
+        <button onclick='startClock2()'>TIME</button>
+    </div>
+    
+    <script>
+        var intervalId2
+        function Clock2(){
+            var now = new Date()
+            var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            var day = days[now.getDay()]
+            var H = now.getHours()
+            var M = now.getMinutes()
+            var S = now.getSeconds()
+            var P = (H>=12)? "PM":"AM"
+
+            H = (H > 12) ? H - 12 : H
+            H = (H == 0) ? 12 : H
+            
+            // H = (H<10)?"0"+H:H
+            M = (M<10)?"0"+M:M
+            S = (S<10)?"0"+S:S
+
+            var Time = day +"  "+ H + ":" + M + ":" + S + " "+ P
+            document.getElementById('clock2').textContent=Time
+        }
+        function startClock2() {
+            if (!intervalId2) {
+                intervalId2 = setInterval(Clock2, 1000);
+                Clock2();
+            }
+        }
+    </script>
+
+</body>
+</html>
