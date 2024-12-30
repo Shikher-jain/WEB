@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM) - 2</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background: #695c5c;
+        }
+        li:hover{
+            border: 1px solid red;
+            background: rgb(199, 184, 181);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <li class="list">L1</li>
+        <li class="list">L2</li>
+        <li class="list">L3</li>
+        <li class="list">L4</li>
+        <li class="list">L5</li>
+    </div>
+    <div class="class1">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo vero corporis perferendis, sed voluptas totam fuga dolorum illo est, at explicabo maiores architecto.
+        </p>
+    </div>
+    <div id="id1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora adipisci hic commodi repudiandae ullam laudantium, provident molestias repellat itaque et sequi animi minus, consectetur magni voluptas cum inventore amet saepe facere est delectus! Non?
+        </p>
+    </div>
+    <form>
+        <label for="username">NAME:</label>
+        <input type="text" name="username" id="username" >
+    </form>
+    <p style="font-size: large;">Javascript demo</p>
+
+    <script>
+        document.writeln("HTML selector")
+        var ele1=document.getElementById("id1")
+        var ele2=document.getElementsByClassName("class1")
+        var ele3=document.getElementsByTagName("p")
+        
+        ele1.innerHTML="INNER HTML"
+        for (let element of ele2) {
+            element.innerHTML = "<b>Modified Content for Class1</b>";
+        }
+        // ele2.innerHTML="<b>HELLO WORLD</b>"
+
+        document.write("<br> TEXT CONTENT OF ELEMENT 1: ",ele1.textContent)
+        ele1.textContent=Date()
+        document.write("<br> TEXT CONTENT OF ELEMENT 1: ",ele1.textContent)
+        
+        var ele4=document.getElementsByName("username")
+
+        document.writeln("<BR>NAME ele4 :",ele4.tagName)
+        document.writeln("<BR>NAME ele4 :",ele4.tabIndex)
+
+        document.writeln("<BR>NAME ele4 :",ele4)
+        document.writeln("<BR>NAME ele4[0].value :",ele4[0].value)
+        document.writeln("<BR>NAME ele4.value :",ele4.value)
+
+
+        ele4[0].setAttribute("placeholder","Enter name:")
+        document.write("<br><b>ele4[0].getAttribute(\"placeholder\") is --&gt </b>",ele4[0].getAttribute("placeholder"))
+        
+        document.writeln("<BR>CSS selector")
+            document.querySelectorAll("li").forEach((item) => {
+            item.addEventListener("mouseover", () => {
+                item.innerHTML = "HTML INNER QUERY SELECTOR";
+            });
+        });
+
+        // Handling `querySelectorAll` by iterating through all elements
+        document.querySelectorAll(".class1 p").forEach((para) => {
+            para.innerHTML = "HTML INNER ALL QUERY SELECTOR";
+        });
+
+        ele1.style.border="12px soild yellow"
+
+        document.querySelector("p").innerHTML="<BR> document.querySelector(\'\P').innerHTML=\"\""
+ 
+        let divElement=document.createElement("div")
+        divElement.style.width="145px"
+        divElement.style.height="100px"
+        divElement.style.border="2px solid red"
+        document.body.appendChild(divElement)
+        
+        
+        let p1=document.createElement("div")
+        p1.style.border="2px solid red"
+        p1.textContent=" p1 text content By JS"
+        divElement.appendChild(p1)
+        
+        let p2=document.createElement("div")
+        p2.style.border="2px solid red"
+        p2.textContent=" p2 text content By JS"
+        divElement.appendChild(p2)
+        divElement.insertBefore(p2,p1)
+        
+        divElement.removeChild(p2)
+        divElement.appendChild(p2)
+        
+        // SHORT HAND
+        let divElement1 = document.createElement("div");
+        divElement1.style.cssText = "width: 145px; height: 100px; border: 2px solid red;";
+        document.body.appendChild(divElement1);
+        
+
+    </script>
+</body>
+</html>
