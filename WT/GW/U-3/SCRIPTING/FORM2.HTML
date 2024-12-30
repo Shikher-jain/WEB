@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+<body>
+
+    <!-- A div to dynamically update based on user input -->
+    <div id="demo">
+        Changed when you type
+    </div>
+
+    <!-- Form with various event handlers -->
+    <form onsubmit="return validateForm()"> <!-- validateForm() must be defined in your script -->
+        <h3>Submit</h3>
+        
+        <!-- Input with onchange event -->
+        <input type="text" onchange="alert('Changed')">
+        <br><br>
+
+        <!-- Input with onfocus and onblur -->
+        <input type="text" onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='aqua'">
+        <br><br>
+
+        <!-- Button with onclick event -->
+        <input type="button" value="Click Me" onclick="alert('CLICKED')">
+        <br><br>
+
+        <!-- Input that updates a div dynamically on input -->
+        <input type="text" placeholder="Enter Any Text" oninput="document.getElementById('demo').innerHTML=this.value">
+        <br><br>
+
+        <!-- Textarea with onselect event -->
+        <textarea onselect="alert('SELECTED TEXT')">TEXT</textarea>
+        <br><br>
+
+        <!-- Input with onkeypress event -->
+        <input type="text" onkeypress="alert('KEY PRESSED')">
+        <br><br>
+
+        <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        // Example form validation function
+        function validateForm() {
+            alert('Form submitted!');
+            // Prevent actual form submission
+            return false;
+        }
+    </script>
+</body>
+</html>

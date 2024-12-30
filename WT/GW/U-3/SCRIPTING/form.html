@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+<body>
+
+    <div id="demo">
+        Changed when you type
+    </div>
+
+    <form onreset="alert('Form Rest')">RESET
+
+    <form onsubmit="return validteForm()">Submit
+        <br>
+        <input type="text" onchange="alert('Changed')">
+        <br>
+        <input type="text" onfocus="this.style.backgroundColor='yellow'">
+        <br>
+        <input type="text" onblur="this.style.backgroundColor='aqua'">
+        <br>
+        <input type="button" value="CLICK KRO!!" onclick="alert('CLICKED')">
+        <br>
+        <input type="text" placeholder="Enter Any Text"  oninput="document.getElementById('demo').innerHTML=this.value">
+
+        <br>
+        <textarea onselect="alert('SELECTED TEXT')">TEXT</textarea>
+        <br>
+        <input type="text" onkeypress="alert('KEY PRESSED')">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        
+    </form>
+    <script>
+        function validteForm(){
+            alert("Form Sumbitted sucessfully!!")
+            return true
+        }
+    </script>
+</body>
+</html>
